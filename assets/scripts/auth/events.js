@@ -34,7 +34,6 @@ const onSignIn = function (event) {
 }
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('you are trying to change password')
   const form = event.target
   const data = getFormFields(form)
   api.changePassword(data)
@@ -46,7 +45,6 @@ const onChangePassword = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('you are trying to sign out')
   const form = event.target
   const data = getFormFields(form)
   api.signOut(data)
@@ -59,7 +57,6 @@ const onSignOut = function (event) {
 
 const addEvent = function (event) {
   event.preventDefault()
-  console.log('you are trying to add an event')
   const form = event.target
   const data = getFormFields(form)
   api.addEvent(data)
@@ -70,7 +67,6 @@ const addEvent = function (event) {
 
 const onViewEvents = function (event) {
   event.preventDefault()
-  console.log('you are trying to view events')
   const form = event.target
   const data = getFormFields(form)
   api.viewEvents(data)
@@ -80,23 +76,23 @@ const onViewEvents = function (event) {
 
 const onUpdateEvent = function (event) {
   event.preventDefault()
-  console.log('you are trying to update an event')
   const form = event.target
   const data = getFormFields(form)
-  console.log(data.events)
   api.updateEvent(data)
-    .then(ui.updateEventsSuccess)
-    .catch(ui.updateEventsFailure)
+    .then(ui.updateEventSuccess)
+    .then($('form').trigger('reset'))
+    .then($('#update-event-form').hide())
+    .catch(ui.updateEventFailure)
 }
 
 const onDeleteEvent = function (event) {
   event.preventDefault()
-  console.log('you are trying to delete an event')
   const form = event.target
   const data = getFormFields(form)
   api.deleteEvent(data)
-    .then(ui.deleteEventsSuccess)
-    .catch(ui.deleteEventsFailure)
+    .then(ui.deleteEventSuccess)
+    .then($('form').trigger('reset'))
+    .catch(ui.deleteEventFailure)
 }
 
 module.exports = {
