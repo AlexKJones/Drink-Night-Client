@@ -12,6 +12,10 @@ $(() => {
   $('#sign-in-form').on('submit', events.onSignIn)
   $('#change-password-form').on('submit', events.onChangePassword)
   $('#sign-out-button').on('click', events.onSignOut)
+  $('#add-event-form').on('submit', events.addEvent)
+  $('#view-events-button').on('click', events.onViewEvents)
+  $('#update-event-form').on('submit', events.onUpdateEvent)
+  $('#delete-event-form').on('submit', events.onDeleteEvent)
 
   // < - - Hidden By Default - ->
   $('#sign-up-form').hide()
@@ -60,10 +64,5 @@ $(() => {
     $('#update-event-form').hide()
     $('#delete-event-form').hide()
     $('#change-password-form').hide()
-  })
-  $('#sign-out-button').click(function () {
-    $('#profile').hide()
-    $('#events').hide()
-    $('#sign-in-form').show()
   })
 })

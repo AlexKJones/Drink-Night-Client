@@ -40,9 +40,59 @@ const signOut = function (data) {
   })
 }
 
+const addEvent = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/events',
+
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'POST',
+    data: data
+  })
+}
+
+const viewEvents = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/events',
+
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'GET',
+    data: data
+  })
+}
+
+const updateEvent = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/events/' + data.event.id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'PATCH',
+    data: data
+  })
+}
+
+const deleteEvent = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/events/' + data.event.id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'DELETE',
+    data: data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  addEvent,
+  viewEvents,
+  updateEvent,
+  deleteEvent
 }

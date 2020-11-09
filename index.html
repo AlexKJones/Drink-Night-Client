@@ -96,12 +96,12 @@
         <button class="btn btn-lg btn-primary btn-block text-uppercase" id="add-event-button" type="submit">Add Event</button>
         <form class="form-addevent" id="add-event-form">
           <div class="form-label-group">
-            <input name="credentials[name]" type="text" id="eventName" class="form-control" placeholder="event name" required>
-            <label for="eventName">Event Name</label>
+            <input name="event[name]" type="text" id="addEventName" class="form-control" placeholder="event name" required>
+            <label for="addEventName">Event Name</label>
           </div>
           <div class="form-label-group">
-            <input name="credentials[date]" type="date" id="eventDate" class="form-control" placeholder="date" required>
-            <label for="eventDate">Date</label>
+            <input name="event[date]" type="date" id="addEventDate" class="form-control" placeholder="date" required>
+            <label for="addEventDate">Date</label>
           </div>
           <button class="btn btn-lg btn-primary btn-block text-uppercase confirm-add" type="submit">Confirm Add</button>
           <hr class="my-4">
@@ -110,57 +110,49 @@
         <!-- < - - - VIEW/INDEX events button  ------------------->
         <button class="btn btn-lg btn-primary btn-block text-uppercase" id="view-events-button" type="button">View Events</button>
 
-        <!-- < - - -EDIT events button  ------------------->
+        <!-- < - - -EDIT/UPDATE events button  ------------------->
         <button class="btn btn-lg btn-primary btn-block text-uppercase" id="update-event-button" type="submit">Update Event</button>
         <form class="form-addevent" id="update-event-form">
           <div class="form-label-group">
-            <input name="credentials[name]" type="text" id="eventName" class="form-control" placeholder="current event name" required>
-            <label for="eventName">Current Event Name</label>
+            <input name="event[id]" type="text" id="updateEventId" class="form-control" placeholder="Event Id" required>
+            <label for="updateEventId">Event Id</label>
           </div>
           <div class="form-label-group">
-            <input name="credentials[date]" type="date" id="eventDate" class="form-control" placeholder="current event date" required>
-            <label for="eventDate">Current Event Date</label>
+            <input name="event[name]" type="text" id="newUpdateEventName" class="form-control" placeholder="new event name">
+            <label for="newUpdateEventName">New Event Name</label>
           </div>
           <div class="form-label-group">
-            <input name="credentials[name]" type="text" id="eventName" class="form-control" placeholder="new event name" required>
-            <label for="eventName">New Event Name</label>
-          </div>
-          <div class="form-label-group">
-            <input name="credentials[date]" type="date" id="eventDate" class="form-control" placeholder="new event date" required>
-            <label for="eventDate">New Event Date</label>
+            <input name="event[date]" type="date" id="newUpdateEventDate" class="form-control" placeholder="new event date">
+            <label for="newUpdateEventDate">New Event Date</label>
           </div>
           <button class="btn btn-lg btn-primary btn-block text-uppercase confirm-update" type="submit">Confirm Edit</button>
           <hr class="my-4">
         </form>
 
-        <!-- < - - -DELTE events button  ------------------->
+        <!-- < - - -DELETE events button  ------------------->
         <button class="btn btn-lg btn-primary btn-block text-uppercase" id="delete-event-button" type="button">Delete Event</button>
         <form class="form-addevent" id="delete-event-form">
           <div class="form-label-group">
-            <input name="credentials[name]" type="text" id="eventName" class="form-control" placeholder="event name" required>
-            <label for="eventName">Event Name</label>
-          </div>
-          <div class="form-label-group">
-            <input name="credentials[date]" type="date" id="eventDate" class="form-control" placeholder="date" required>
-            <label for="eventDate">Date</label>
+            <input name="event[id]" type="text" id="deleteEventId" class="form-control" placeholder="Event Id" required>
+            <label for="deleteEventId">Event Id</label>
           </div>
           <button class="btn btn-lg btn-primary btn-block text-uppercase confirm-delete" type="submit">Confirm Deletion</button>
           <hr class="my-4">
         </form>
 
         <!-- < - - -SIGN OUT button  ------------------->
-        <button class="btn btn-lg btn-primary btn-block text-uppercase" id="sign-out-button" type="click">Sign Out</button>
+        <button class="btn btn-lg btn-primary btn-block text-uppercase" id="sign-out-button" type="submit">Sign Out</button>
 
         <!-- < - - - CHANGE PASSWORD button  ------------------->
         <button class="btn btn-lg btn-primary btn-block text-uppercase" id="change-password-button" type="button">Change Password</button>
         <hr class="my-4">
         <form class="form-change-password" id="change-password-form">
           <div class="form-label-group">
-            <input name="credentials[password]" type="password" id="oldPassword" class="form-control" placeholder="Old Password" required>
+            <input name="passwords[old]" type="password" id="oldPassword" class="form-control" placeholder="Old Password" required>
             <label for="oldPassword">Old Password</label>
           </div>
           <div class="form-label-group">
-            <input name="credentials[password]" type="password" id="newPassword" class="form-control" placeholder="New Password" required>
+            <input name="passwords[new]" type="password" id="newPassword" class="form-control" placeholder="New Password" required>
             <label for="newPassword">New Password</label>
           </div>
           <button class="btn btn-lg btn-primary btn-block text-uppercase change-password-form" type="submit">Change Password</button>

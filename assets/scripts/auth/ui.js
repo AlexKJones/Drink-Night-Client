@@ -46,9 +46,74 @@ const signOutFailure = function (error) {
   $("#notification").text('Error, Could not sign out')
 }
 
+const addEventSuccess = function () {
+  console.log('add event success')
+  $("#notification").text('Event Added')
+  $('form').trigger('reset')
+}
+
+const addEventFailure = function () {
+  console.log('add event failure')
+  $("#notification").text('Event Not Added')
+}
+
+const viewEventsSuccess = function (response) {
+  console.log(response)
+  $("#notification").text('Events viewable')
+  $('#events').html('')
+  const events = response.events
+  events.forEach(function (event) {
+    const eventHTML = (`
+      <h5>Name: ${event.name}</h5>
+      <p>Date: ${event.date}</p>
+      <p>ID: ${event._id}</p>
+      <br>
+    `)
+    $('#events').append(eventHTML)
+  })
+}
+
+
+const viewEventsFailure = function () {
+  console.log('view event failure')
+  $("#notification").text('Event Not viewable')
+}
+
+const updateEventSuccess = function () {
+  console.log('update event success')
+  $("#notification").text('Event updated')
+}
+
+const updateEventFailure = function () {
+  console.log('update event failure')
+  $("#notification").text('Event Not updated')
+}
+
+const deleteEventSuccess = function () {
+  console.log('delete event success')
+  $("#notification").text('Event deleted')
+}
+
+const deleteEventFailure = function () {
+  console.log('delete event failure')
+  $("#notification").text('Event Not deleted')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure,
+  signOutSuccess,
+  signOutFailure,
+  addEventSuccess,
+  addEventFailure,
+  viewEventsSuccess,
+  viewEventsFailure,
+  updateEventSuccess,
+  updateEventFailure,
+  deleteEventSuccess,
+  deleteEventFailure
 }
