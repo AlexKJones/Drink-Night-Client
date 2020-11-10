@@ -18,3 +18,5 @@ bootstrap, jquery, popper.js, babel-core, grunt, mocha, sass, handlebars, node, 
 
 What it Does: 
 This is the front end of the Drink Night app it set ups the format, webpage, and visual, clickable buttons to communicate with the API so that a user can Sign up, in , out, or change their password this also gives forms and submition buttons to allow a user to view, create, destroy, and update events for their account that eventually will be populatable by drinks consumed during the events for tracking purposes.
+
+During Developement I used a lot of what I learned during the last project to guide me through the issues I came across during this project.  I took each button one at a time to make sure I had each layer working correctly.  I would like in a later version to clean up the css more so that the events are listed in the balloons that I have everything else displayed in as well as clean up some of the other panels.
