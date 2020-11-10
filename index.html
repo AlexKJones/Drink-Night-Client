@@ -160,6 +160,37 @@
         </form>
         </div>
 
+        <!-- - - - - - - - - Add Drink Button - - - - - --->
+      <button class="btn btn-lg btn-primary btn-block text-uppercase" id="add-drink-button" type="submit">Add Drink</button>
+      <form class="form-adddrink" id="add-drink-form">
+        <div class="form-label-group">
+          <input name="event[id]" type="text" id="addDrinkId" class="form-control" placeholder="Event Id" required>
+          <label for="addDrinkId">Event Id</label>
+        </div>
+        <div class="form-label-group">
+          <select id="drinks" name="drinks" size="5">
+            <option value="rum">Rum</option>
+            <option value="moonshine">Moonshine</option>
+            <option value="beer">Beer</option>
+            <option value="cider">Cider</option>
+            <option value="whiskey">Whiskey</option>
+            <option value="vodka">Vodka</option>
+            <option value="gin">Gin</option>
+            <option value="wine">Wine</option>
+            <option value="champagne">Champagne</option>
+            <option value="soju">Soju</option>
+            <option value="mead">Mead</option>
+            <option value="sake">Sake</option>
+            <option value="brandy">Brandy</option>
+            <option value="tequila">Tequila</option>
+            <option value="absinthe">Absinthe</option>
+            <option value="everclear">Everclear</option>
+          </select>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block text-uppercase confirm-add-drink" type="submit">Confirm Add</button>
+        <hr class="my-4">
+      </form>
+
     </div>
   </div>
 </div>

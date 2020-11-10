@@ -60,6 +60,7 @@ const viewEventsSuccess = function (response) {
       <h5>Name: ${event.name}</h5>
       <p>Date: ${event.date}</p>
       <p>ID: ${event._id}</p>
+      <p>Drinks: ${event.drinks}</p>
       <br>
     `)
     $('#events').append(eventHTML)
@@ -89,6 +90,14 @@ const deleteEventFailure = function () {
   $('#notification').text('Event Not deleted')
 }
 
+const addDrinkSuccess = function () {
+  $('#notification').text('Drink Added')
+}
+
+const addDrinkFailure = function () {
+  $('#notification').text('Drink Not Added')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -105,5 +114,7 @@ module.exports = {
   updateEventSuccess,
   updateEventFailure,
   deleteEventSuccess,
-  deleteEventFailure
+  deleteEventFailure,
+  addDrinkSuccess,
+  addDrinkFailure
 }

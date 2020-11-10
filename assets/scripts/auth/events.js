@@ -91,6 +91,16 @@ const onDeleteEvent = function (event) {
     .catch(ui.deleteEventFailure)
 }
 
+const onAddDrink = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.addDrink(data)
+    .then(ui.addDrinkSuccess)
+    .then($('#add-drink-form').hide())
+    .catch(ui.addDrinkFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -99,5 +109,6 @@ module.exports = {
   addEvent,
   onViewEvents,
   onUpdateEvent,
-  onDeleteEvent
+  onDeleteEvent,
+  onAddDrink
 }

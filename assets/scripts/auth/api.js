@@ -86,6 +86,18 @@ const deleteEvent = function (data) {
   })
 }
 
+const addDrink = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/drinks',
+
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'POST',
+    data: data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -94,5 +106,6 @@ module.exports = {
   addEvent,
   viewEvents,
   updateEvent,
-  deleteEvent
+  deleteEvent,
+  addDrink
 }

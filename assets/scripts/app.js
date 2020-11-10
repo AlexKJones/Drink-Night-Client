@@ -16,6 +16,7 @@ $(() => {
   $('#view-events-button').on('click', events.onViewEvents)
   $('#update-event-form').on('submit', events.onUpdateEvent)
   $('#delete-event-form').on('submit', events.onDeleteEvent)
+  $('#add-drink-form').on('submit', events.onAddDrink)
 
   // < - - Hidden By Default - ->
   $('#sign-up-form').hide()
@@ -25,6 +26,7 @@ $(() => {
   $('#update-event-form').hide()
   $('#delete-event-form').hide()
   $('#change-password-form').hide()
+  $('#add-drink-form').hide()
 
   // < - - Show things buttons - ->
   $('#sign-up-button').click(function () {
@@ -40,29 +42,37 @@ $(() => {
     $('#update-event-form').hide()
     $('#delete-event-form').hide()
     $('#change-password-form').hide()
+    $('#add-drink-form').hide()
   })
   $('#update-event-button').click(function () {
     $('#update-event-form').show()
     $('#add-event-form').hide()
     $('#delete-event-form').hide()
     $('#change-password-form').hide()
+    $('#add-drink-form').hide()
   })
   $('#delete-event-button').click(function () {
     $('#delete-event-form').show()
     $('#add-event-form').hide()
     $('#update-event-form').hide()
     $('#change-password-form').hide()
+    $('#add-drink-form').hide()
   })
   $('#change-password-button').click(function () {
     $('#change-password-form').show()
     $('#add-event-form').hide()
     $('#update-event-form').hide()
     $('#delete-event-form').hide()
+    $('#add-drink-form').hide()
   })
   $('#view-events-button').click(function () {
     $('#add-event-form').hide()
     $('#update-event-form').hide()
     $('#delete-event-form').hide()
     $('#change-password-form').hide()
+    $('#add-drink-form').hide()
+  })
+  $('#add-drink-button').click(function () {
+    $('#add-drink-form').show()
   })
 })
