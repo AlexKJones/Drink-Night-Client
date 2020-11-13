@@ -14,6 +14,10 @@ const signUpFailure = function (error) {
 const signInSuccess = function (response) {
   $('#notification').text('Thanks for signing in! ' + response.user.email)
   store.user = response.user
+  $('#sign-in-form').hide()
+  $('#sign-up-form').hide()
+  $('#profile').show()
+  $('#events').show()
 }
 
 const signInFailure = function (error) {

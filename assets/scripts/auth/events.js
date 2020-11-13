@@ -25,10 +25,6 @@ const onSignIn = function (event) {
   const data = getFormFields(form)
   api.signIn(data)
     .then(ui.signInSuccess)
-    .then($('#sign-in-form').hide())
-    .then($('#sign-up-form').hide())
-    .then($('#profile').show())
-    .then($('#events').show())
     .then($('form').trigger('reset'))
     .catch(ui.signInFailure)
 }
