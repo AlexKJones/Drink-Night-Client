@@ -18,15 +18,19 @@ const signInSuccess = function (response) {
   $('#sign-up-form').hide()
   $('#profile').show()
   $('#events').show()
+  $('form').trigger('reset')
 }
 
 const signInFailure = function (error) {
   $('#notification').text('Sign in failed, try again')
+  $('form').trigger('reset')
 }
 
 const changePasswordSuccess = function () {
   $('#notification').text('Thanks for changing your password!')
   $('form').trigger('reset')
+  $('#change-password-form').hide()
+
 }
 
 const changePasswordFailure = function (error) {

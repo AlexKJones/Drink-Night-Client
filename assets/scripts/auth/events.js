@@ -25,7 +25,6 @@ const onSignIn = function (event) {
   const data = getFormFields(form)
   api.signIn(data)
     .then(ui.signInSuccess)
-    .then($('form').trigger('reset'))
     .catch(ui.signInFailure)
 }
 const onChangePassword = function (event) {
@@ -34,8 +33,6 @@ const onChangePassword = function (event) {
   const data = getFormFields(form)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
-    .then($('#change-password-form').hide())
-    .then($('form').trigger('reset'))
     .catch(ui.changePasswordFailure)
 }
 
